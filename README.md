@@ -11,6 +11,28 @@ Sau khi sát nhập giữa tỉnh Hải Dương và thành phố Hải Phòng, n
 - ✅ Hiển thị thông tin chi tiết: điện thoại, giờ làm việc, dịch vụ
 - ✅ Giao diện thân thiện, dễ sử dụng trên mọi thiết bị
 
+## 🌐 Demo & Deploy
+
+### Demo Online
+**Ứng dụng đã sẵn sàng để deploy!** Xem hướng dẫn bên dưới.
+
+### Deploy nhanh (2 phút)
+**Cách 1 - Netlify (Dễ nhất):**
+```
+1. Vào: https://app.netlify.com/drop
+2. Kéo thả folder vào
+3. Xong trong 30 giây!
+```
+
+**Cách 2 - GitHub Pages (Miễn phí vĩnh viễn):**
+```
+1. Vào: Settings → Pages
+2. Chọn Source: GitHub Actions
+3. Đợi 2 phút → Xong!
+```
+
+📖 **Xem hướng dẫn chi tiết:** [DEPLOY.md](DEPLOY.md) | [DEPLOY_NGAY.md](DEPLOY_NGAY.md)
+
 ## 🚀 Tính năng
 
 ### 1. Tìm kiếm thông minh

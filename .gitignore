@@ -32,6 +32,9 @@ build/
 .env.local
 .env.*.local
 
+# Supabase Configuration (contains API keys)
+config.js
+
 # Temporary
 tmp/
 temp/

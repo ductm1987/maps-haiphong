@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tra cứu địa chỉ các cơ quan hành chính Hải Phòng sau sát nhập">
+    <title>Tra cứu địa chỉ Cơ quan Hành chính - Hải Phòng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">
+                    <span class="icon">🏛️</span>
+                    Tra cứu địa chỉ Hành chính Hải Phòng
+                </h1>
+                <p class="header-subtitle">Thông tin các cơ quan hành chính sau sát nhập Hải Dương - Hải Phòng</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input
+                            type="text"
+                            id="searchInput"
+                            class="search-input"
+                            placeholder="Tìm kiếm theo tên cơ quan, quận/huyện..."
+                            autocomplete="off"
+                        >
+                        <button id="clearSearch" class="clear-btn" style="display: none;">✕</button>
+                    </div>
+
+                    <!-- Filter Options -->
+                    <div class="filter-container">
+                        <div class="filter-group">
+                            <label for="categoryFilter">Loại cơ quan:</label>
+                            <select id="categoryFilter" class="filter-select">
+                                <option value="">Tất cả</option>
+                                <option value="Quận/Huyện">UBND Quận/Huyện</option>
+                                <option value="Sở ngành">Sở, Ban ngành</option>
+                                <option value="Cơ quan thành phố">Cơ quan cấp TP</option>
+                                <option value="Trung tâm hành chính">Trung tâm Hành chính</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="districtFilter">Quận/Huyện:</label>
+                            <select id="districtFilter" class="filter-select">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <div class="results-header">
+                    <h2 id="resultsTitle">Tất cả cơ quan (<span id="resultsCount">0</span>)</h2>
+                    <div class="view-toggle">
+                        <button id="listView" class="view-btn active" title="Xem dạng danh sách">
+                            <span>☰</span>
+                        </button>
+                        <button id="gridView" class="view-btn" title="Xem dạng lưới">
+                            <span>⊞</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="loadingIndicator" class="loading">
+                    <div class="spinner"></div>
+                    <p>Đang tải dữ liệu...</p>
+                </div>
+
+                <div id="resultsContainer" class="results-container list-view">
+                    <!-- Results will be dynamically inserted here -->
+                </div>
+
+                <div id="noResults" class="no-results" style="display: none;">
+                    <span class="no-results-icon">🔍</span>
+                    <h3>Không tìm thấy kết quả</h3>
+                    <p>Vui lòng thử từ khóa khác hoặc điều chỉnh bộ lọc</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Hải Phòng Administrative Lookup | Cập nhật lần cuối: <span id="lastUpdated"></span></p>
+            <p class="footer-note">
+                <strong>Lưu ý:</strong> Thông tin có thể thay đổi. Vui lòng liên hệ trực tiếp với cơ quan để xác nhận.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Location Detail Modal -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Detail content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
